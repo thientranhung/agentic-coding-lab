@@ -31,6 +31,16 @@ Deep dive into how slash commands translate into actual AI actions via execution
 - **Document**: [Command & Execution Logic](./BMAD-Command-Execution-Logic.md)
 - **Key Content**: Anatomy of a Command, comparing Step-file Workflow vs XML Task Engine (`workflow.xml`).
 
+### 4️⃣ Advanced Modules & Research
+Specialized topics for advanced understanding and usage of BMAD.
+
+- **[Operating Modes](./bmad-modes.md)**: Deep dive into Enterprise vs Quick flows, Party Mode, and various implementations.
+- **[BMAD Builder (Meta-Layer)](./bmad-builder.md)**: How to use the BMAD Builder to generate Agents, Workflows, and Modules (Self-building capability).
+- **[Research & Creativity (CIS)](./bmad-cis.md)**: The creative brain, helping define strategy and ideas before coding.
+- **[Game Dev Workflow (GDS)](./bmad-gds.md)**: Specialized system for Game Dev (Unity, Unreal) with a dedicated Agent team.
+- **[Test Architecture (TestArch)](./bmad-testarch.md)**: Comprehensive Quality Assurance (QA) system, from ATDD to Code Review.
+- **[TEA Module (Test Engineering)](./bmad-tea.md)**: Overview of TEA module and testing architecture.
+- **[Excalidraw Generators](./bmad-excalidraw.md)**: Automated generation of Wireframes, ERDs, and Architecture diagrams.
 ---
 
 ## 🛠 Original Reference
@@ -45,6 +55,8 @@ For cross-referencing with original English content.
 | Want to understand file setup & organization | [Architecture](./BMAD-Architecture-Analysis.md) |
 | Want to know which command to run next | [Workflow](./BMAD-Workflow-Deep-Dive.md) |
 | Want to debug or modify command behavior | [Execution Logic](./BMAD-Command-Execution-Logic.md) |
+| Want to customize or create new Agents/Workflows | [BMAD Builder](./bmad-builder.md) |
+| Want to understand different operating modes | [Modes](./bmad-modes.md) |
 
 ---
 *This document is automatically compiled and updated by Astragentic.*

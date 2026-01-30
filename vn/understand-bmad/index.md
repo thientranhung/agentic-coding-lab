@@ -31,6 +31,18 @@ Phân tích sâu về cách các câu lệnh slash chuyển hóa thành hành đ
 
 ---
 
+### 4️⃣ Cấp độ Nâng cao & Mở rộng (Advanced Modules)
+Các chủ đề chuyên sâu giúp khai thác tối đa sức mạnh của BMAD.
+
+- **[Nghiên cứu & Sáng tạo (CIS)](./bmad-cis.md)**: Bộ não sáng tạo, giúp định hình chiến lược và ý tưởng trước khi code.
+- **[Quy trình làm Game (GDS)](./bmad-gds.md)**: Hệ thống chuyên biệt cho Game Dev (Unity, Unreal) với đội ngũ Agent riêng.
+- **[Kiến trúc Kiểm thử (TestArch)](./bmad-testarch.md)**: Hệ thống đảm bảo chất lượng toàn diện (QA), từ ATDD đến Review code.
+- **[Module TEA (Test Engineering)](./bmad-tea.md)**: Tổng quan về phân hệ TEA và kiến trúc kiểm thử.
+- **[Bộ tạo Diagram (Excalidraw)](./bmad-excalidraw.md)**: Tự động vẽ sơ đồ kiến trúc, luồng đi dữ liệu.
+- **[BMAD Builder](./bmad-builder.md)**: Meta-layer giúp tự xây dựng và tùy biến các Agent/Workflow mới.
+
+---
+
 ## 🛠 Tài liệu Tham khảo Gốc (Original Reference)
 Dành cho việc đối chiếu với nội dung gốc bằng tiếng Anh.
 - [BMAD Architecture Analysis (English)](./BMAD-Architecture-Analysis.md)

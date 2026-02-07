@@ -37,6 +37,13 @@ Techniques for controlling the most powerful coding agent currently available, f
 
 - **[Claude Code Newbie to Pro](en/understand-claude-code-newbie.md)**: Global scaffolding, hooks, and security gates.
 
+### 4. Scrum & Project Management
+*Structuring the Agentic Team*
+
+Adapting Scrum methodologies for AI-augmented development, defining roles and responsibilities in a hybrid human-agent workforce.
+
+- **[Scrum Overview](en/understand-scrum/index.md)**: Team structure, roles, and glossary.
+
 ---
 
 ## 📚 Course: Mastering BMAD

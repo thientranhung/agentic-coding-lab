@@ -37,6 +37,13 @@ Các kỹ thuật để kiểm soát coding agent mạnh mẽ nhất hiện nay,
 
 - **[Claude Code từ Newbie đến Pro](understand-claude-code-newbie.md)**: Scaffolding toàn cục, hooks, và các cổng bảo mật.
 
+### 4. Scrum & Quản Trị Dự Án
+*Cấu trúc Đội ngũ Agentic*
+
+Áp dụng phương pháp Scrum cho quy trình phát triển có sự hỗ trợ của AI, định nghĩa vai trò và trách nhiệm trong môi trường làm việc kết hợp người-agent.
+
+- **[Tổng Quan Scrum](understand-scrum/index.md)**: Cấu trúc đội ngũ, các vai trò và thuật ngữ.
+
 ---
 
 ## 📚 Khóa học: Làm chủ BMAD

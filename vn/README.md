@@ -14,7 +14,14 @@ Mục tiêu của phòng thí nghiệm này là tài liệu hóa và chuẩn hó
 
 ## 🔬 Các mảng nghiên cứu cốt lõi
 
-### 1. Phương pháp BMAD
+### 1. Scrum & Quản Trị Dự Án
+*Cấu trúc Đội ngũ Agentic*
+
+Áp dụng phương pháp Scrum cho quy trình phát triển có sự hỗ trợ của AI, định nghĩa vai trò và trách nhiệm trong môi trường làm việc kết hợp người-agent.
+
+- **[Tổng Quan Scrum](understand-scrum/index.md)**: Cấu trúc đội ngũ, các vai trò và thuật ngữ.
+
+### 2. Phương pháp BMAD
 *Business Methodology and Architecture Development*
 
 Một framework quy củ, phân theo giai đoạn để chuyển đổi ngôn ngữ tự nhiên thành phần mềm cấp doanh nghiệp. Nó là cầu nối giữa một ý tưởng mơ hồ và mã nguồn chạy được thông qua hệ thống "giàn giáo" kiến trúc nghiêm ngặt.
@@ -23,26 +30,19 @@ Một framework quy củ, phân theo giai đoạn để chuyển đổi ngôn ng
 - **[Quy trình Chuyên sâu](understand-bmad/BMAD-Workflow-Deep-Dive.md)**: 5 giai đoạn phát triển.
 - **[Logic Thực thi Lệnh](understand-bmad/BMAD-Command-Execution-Logic.md)**: Cách các slash command điều khiển động cơ agent.
 
-### 2. Beads: Quản lý Tác vụ Agent
+### 3. Beads: Quản lý Tác vụ Agent
 *Hệ thống "Jira" dành cho AI Agent*
 
 Một hệ thống theo dõi vấn đề chuyên biệt được thiết kế cho agent, giải quyết vấn đề "Mất trí nhớ của Agent" (Agent Amnesia) bằng cách lưu trữ ngữ cảnh và trạng thái bên ngoài cửa sổ context.
 
 - **[Tìm hiểu về Beads](understand-beads.md)**: Tại sao task list bằng Markdown lại thất bại và cách Beads thành công.
 
-### 3. Làm chủ Claude Code
+### 4. Làm chủ Claude Code
 *Hướng dẫn V2 Nâng cao*
 
 Các kỹ thuật để kiểm soát coding agent mạnh mẽ nhất hiện nay, tập trung vào hành vi xác định (deterministic) thông qua hooks và các lớp thực thi (enforcement layers).
 
 - **[Claude Code từ Newbie đến Pro](understand-claude-code-newbie.md)**: Scaffolding toàn cục, hooks, và các cổng bảo mật.
-
-### 4. Scrum & Quản Trị Dự Án
-*Cấu trúc Đội ngũ Agentic*
-
-Áp dụng phương pháp Scrum cho quy trình phát triển có sự hỗ trợ của AI, định nghĩa vai trò và trách nhiệm trong môi trường làm việc kết hợp người-agent.
-
-- **[Tổng Quan Scrum](understand-scrum/index.md)**: Cấu trúc đội ngũ, các vai trò và thuật ngữ.
 
 ---
 

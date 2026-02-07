@@ -14,7 +14,14 @@ The goal of this lab is to document and standardize distinct methodologies for w
 
 ## 🔬 Core Research Areas
 
-### 1. The BMAD Method
+### 1. Scrum & Project Management
+*Structuring the Agentic Team*
+
+Adapting Scrum methodologies for AI-augmented development, defining roles and responsibilities in a hybrid human-agent workforce.
+
+- **[Scrum Overview](en/understand-scrum/index.md)**: Team structure, roles, and glossary.
+
+### 2. The BMAD Method
 *Business Methodology and Architecture Development*
 
 A disciplined, phase-based framework for converting natural language into enterprise-grade software. It bridges the gap between a vague idea and executable code through strict architectural scaffolding.
@@ -23,26 +30,19 @@ A disciplined, phase-based framework for converting natural language into enterp
 - **[Workflow Deep Dive](en/understand-bmad/BMAD-Workflow-Deep-Dive.md)**: The 5 phases of development.
 - **[Command Execution Logic](en/understand-bmad/BMAD-Command-Execution-Logic.md)**: How slash commands drive the agent engine.
 
-### 2. Beads: Agent Task Management
+### 3. Beads: Agent Task Management
 *The "Jira" for AI Agents*
 
 A specialized issue tracking system designed for agents, solving the "Agent Amnesia" problem by persisting context and state outside the context window.
 
 - **[Understanding Beads](en/understand-beads.md)**: Why Markdown tasks fail and how Beads succeeds.
 
-### 3. Claude Code Mastery
+### 4. Claude Code Mastery
 *Advanced V2 Guide*
 
 Techniques for controlling the most powerful coding agent currently available, focusing on deterministic behavior via hooks and enforcement layers.
 
 - **[Claude Code Newbie to Pro](en/understand-claude-code-newbie.md)**: Global scaffolding, hooks, and security gates.
-
-### 4. Scrum & Project Management
-*Structuring the Agentic Team*
-
-Adapting Scrum methodologies for AI-augmented development, defining roles and responsibilities in a hybrid human-agent workforce.
-
-- **[Scrum Overview](en/understand-scrum/index.md)**: Team structure, roles, and glossary.
 
 ---
 

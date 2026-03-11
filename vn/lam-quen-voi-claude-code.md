@@ -1,11 +1,6 @@
-# Hướng dẫn toàn tập về Claude Code V2
+# Làm quen với Claude Code
 
-> **Lưu ý:** Đây là phiên bản V2 của hướng dẫn đã được cộng đồng đón nhận nồng nhiệt. Cảm ơn rất nhiều đến u/headset38, u/tulensrma, u/jcheroske và tất cả những người đã bình luận. Bạn đã chỉ ra rằng các quy tắc trong CLAUDE.md chỉ là gợi ý mà Claude có thể bỏ qua — và bạn đã đúng. Phiên bản này bổ sung **Phần 7: Skills & Hooks**, bao gồm lớp thực thi (enforcement layer) để đảm bảo Claude tuân thủ các quy tắc một cách nghiêm ngặt.
-
-### Những gì mới trong V2:
-
-- **Phần 7: Skills & Hooks** — Thực thi xác định thay vì gợi ý hành vi
-- [GitHub repo](https://github.com/TheDecipherist/claude-code-mastery) với các template, hooks và skills sẵn sàng sử dụng
+> Tài liệu hướng dẫn toàn diện từ cơ bản đến nâng cao về cách sử dụng Claude Code hiệu quả — bao gồm bảo mật, scaffolding, MCP, commands, context management, hooks và skills.
 
 ## Tóm tắt (TL;DR)
 
@@ -543,7 +538,7 @@ Sub-agent hoạt động trong ngữ cảnh cô lập và chỉ trả về câu 
 
 ## Phần 7: Skills & Hooks — Sự thực thi thay vì Gợi ý
 
-Phần này được thêm vào dựa trên phản hồi cộng đồng. Đặc biệt cảm ơn u/headset38 và u/tulensrma vì đã chỉ ra rằng **Claude không phải lúc nào cũng tuân theo các quy tắc CLAUDE.md một cách nghiêm ngặt**.
+Một thực tế quan trọng: **Claude không phải lúc nào cũng tuân theo các quy tắc CLAUDE.md một cách nghiêm ngặt**. Phần này giải thích cách sử dụng hooks và skills để đảm bảo tính xác định.
 
 ### Tại sao các quy tắc CLAUDE.md có thể thất bại
 
@@ -855,21 +850,6 @@ CLAUDE.local.md
 
 ---
 
-## GitHub Repo
-
-Tất cả templates, hooks và skills từ hướng dẫn này có sẵn tại:
-
-**[github.com/TheDecipherist/claude-code-mastery](https://github.com/TheDecipherist/claude-code-mastery)**
-
-### Bao gồm:
-
-- Template CLAUDE.md hoàn chỉnh (global + project)
-- Hooks sẵn sàng sử dụng (block-secrets.py, end-of-turn.sh, v.v.)
-- Skills ví dụ (commit-messages, security-audit)
-- settings.json với hooks được cấu hình sẵn
-
----
-
 ## Nguồn tham khảo
 
 - [Claude Code: Best practices for agentic coding](https://www.anthropic.com/engineering/claude-code-best-practices) — Anthropic
@@ -878,22 +858,10 @@ Tất cả templates, hooks và skills từ hướng dẫn này có sẵn tại:
 - [Equipping agents for the real world with Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) — Anthropic
 - [Agent Skills Documentation](https://code.claude.com/docs/en/skills) — Claude Code Docs
 - [Hooks Reference](https://code.claude.com/docs/en/hooks) — Claude Code Docs
-- [Claude Project Scaffolding](https://github.com/madison-hutson/claude-project-scaffolding) — Madison Hutson
-- [CLAUDE.md Templates](https://github.com/ruvnet/claude-flow/wiki/CLAUDE-MD-Templates) — Claude-Flow
 - [Context7 MCP Server](https://github.com/upstash/context7) — Upstash
 - [Context Rot Research](https://research.trychroma.com/context-rot) — Chroma
 - [LLMs Get Lost In Multi-Turn Conversation](https://arxiv.org/pdf/2505.06120) — arXiv
 - [Claude Code Security Best Practices](https://www.backslash.security/blog/claude-code-security-best-practices) — Backslash
 - [Claude Code Hooks: Guardrails That Actually Work](https://paddo.dev/blog/claude-code-hooks-guardrails/) — Paddo.dev
-- [Claude Code Hooks Mastery](https://github.com/disler/claude-code-hooks-mastery) — GitHub
-- [Claude loads secrets without permission](https://www.knostic.ai/blog/claude-loads-secrets-without-permission) — Knostic
 - [Slash Commands Documentation](https://code.claude.com/docs/en/slash-commands) — Claude Code Docs
-- [Writing a good CLAUDE.md](https://www.humanlayer.dev/blog/writing-a-good-claude-md) — HumanLayer
 - [Context Management Guide](https://www.arsturn.com/blog/beyond-prompting-a-guide-to-managing-context-in-claude-code) — Arsturn
-- [CLAUDE.md Best Practices from Prompt Learning](https://arize.com/blog/claude-md-best-practices-learned-from-optimizing-claude-code-with-prompt-learning/) — Arize
-
----
-
-> **Bạn có gì trong global CLAUDE.md của mình? Chia sẻ hooks, skills và patterns của bạn bên dưới.**
->
-> *Được viết với ❤️ bởi [TheDecipherist](https://thedecipherist.com?utm_source=reddit&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=author-link) và cộng đồng Claude Code*

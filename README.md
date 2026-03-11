@@ -55,7 +55,7 @@ Research on frameworks that add structure, memory, and orchestration to AI-assis
 |:------|:-----|:------------|
 | **Scrum for Agentic Teams** | [📖 Index](en/understand-scrum/index.md) | Adapting Scrum for AI-augmented teams — [Team Structure](en/understand-scrum/01-team-structure.md) · [Glossary](en/understand-scrum/02-glossary.md) |
 | **Beads: Agent Task Management** | [📖 Read](en/understand-beads.md) | Issue tracking designed for AI agents, solving "Agent Amnesia" |
-| **Claude Code — Newbie to Pro** | [📖 Read](en/understand-claude-code-newbie.md) | Getting started guide with hooks and security gates |
+| **Getting Started with Claude Code** | [📖 Read](en/getting-started-with-claude-code.md) | Beginner-to-advanced guide with hooks and security gates |
 
 ---
 
@@ -96,7 +96,7 @@ agentic-coding-lab/
 │   ├── superpowers/                 # Superpowers framework
 │   ├── understand-scrum/            # Scrum adaptation
 │   ├── understand-beads.md          # Agent task management
-│   └── understand-claude-code-newbie.md
+│   └── getting-started-with-claude-code.md
 └── vn/                          # 🇻🇳 Vietnamese documentation
     └── (mirror structure of en/)
 ```

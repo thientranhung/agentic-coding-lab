@@ -1,12 +1,6 @@
-[ **English** ](understand-claude-code-newbie.md) | [ **Tiếng Việt** ](../vn/understand-claude-code-newbie.md)
+# Getting Started with Claude Code for Beginners
 
-# Complete Guide to Claude Code V2
-
-> **Note:** This is the V2 version of the guide, widely welcomed by the community. Thanks to u/headset38, u/tulensrma, u/jcheroske for your feedback. This version adds **Part 7: Skills & Hooks**, including an enforcement layer to ensure Claude strictly follows rules.
-
-### What's New in V2:
-- **Part 7: Skills & Hooks** — Deterministic enforcement instead of suggestions.
-- [GitHub repo](https://github.com/TheDecipherist/claude-code-mastery) with templates, hooks, and skills.
+> A comprehensive guide from basics to advanced on how to use Claude Code effectively — covering security, scaffolding, MCP, commands, context management, hooks, and skills.
 
 ## TL;DR
 Your global `~/.claude/CLAUDE.md` file acts as a **security gatekeeper** (preventing secret leaks) AND a **project scaffolding blueprint** (ensuring consistency).
@@ -104,6 +98,8 @@ Research shows performance drops significantly when context drifts.
 
 ## Part 7: Skills & Hooks — Enforcement over Suggestion
 
+An important reality: **Claude doesn't always strictly follow CLAUDE.md rules**. This section explains how to use hooks and skills to ensure deterministic behavior.
+
 **Hooks** are shell commands that run at specific lifecycle events. They are **deterministic**.
 
 **Example:** `PreToolUse` hook to block access to `.env` files. If Claude tries to read `.env`, the hook exits with code 2, blocking the action.
@@ -129,5 +125,13 @@ Research shows performance drops significantly when context drifts.
 
 ---
 
-> **Resources**:
-> [GitHub Repo with Templates](https://github.com/TheDecipherist/claude-code-mastery)
+## References
+
+- [Claude Code: Best practices for agentic coding](https://www.anthropic.com/engineering/claude-code-best-practices) — Anthropic
+- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Anthropic
+- [Introducing the Model Context Protocol](https://www.anthropic.com/news/model-context-protocol) — Anthropic
+- [Agent Skills Documentation](https://code.claude.com/docs/en/skills) — Claude Code Docs
+- [Hooks Reference](https://code.claude.com/docs/en/hooks) — Claude Code Docs
+- [Context7 MCP Server](https://github.com/upstash/context7) — Upstash
+- [Context Rot Research](https://research.trychroma.com/context-rot) — Chroma
+- [Slash Commands Documentation](https://code.claude.com/docs/en/slash-commands) — Claude Code Docs

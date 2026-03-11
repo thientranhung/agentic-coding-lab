@@ -55,7 +55,7 @@ Nghiên cứu về các framework bổ sung cấu trúc, bộ nhớ, và khả n
 |:-------|:---------|:------|
 | **Scrum cho Agentic Teams** | [📖 Mục lục](vn/understand-scrum/index.md) | Áp dụng Scrum cho team kết hợp AI — [Cơ cấu Team](vn/understand-scrum/01-team-structure.md) · [Thuật ngữ](vn/understand-scrum/02-glossary.md) |
 | **Beads: Quản lý Task cho Agent** | [📖 Đọc](vn/understand-beads.md) | Hệ thống tracking được thiết kế cho AI agents, giải quyết "Agent Amnesia" |
-| **Claude Code — Từ Newbie đến Pro** | [📖 Đọc](vn/understand-claude-code-newbie.md) | Hướng dẫn bắt đầu với hooks và security gates |
+| **Làm quen với Claude Code** | [📖 Đọc](vn/lam-quen-voi-claude-code.md) | Hướng dẫn từ cơ bản đến nâng cao với hooks và security gates |
 
 ---
 
@@ -96,7 +96,7 @@ agentic-coding-lab/
 │   ├── superpowers/                 # Superpowers framework
 │   ├── understand-scrum/            # Áp dụng Scrum
 │   ├── understand-beads.md          # Quản lý task cho agent
-│   └── understand-claude-code-newbie.md
+│   └── getting-started-with-claude-code.md
 └── vn/                          # 🇻🇳 Tài liệu tiếng Việt
     └── (cấu trúc tương tự en/)
 ```

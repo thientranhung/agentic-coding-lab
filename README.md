@@ -1,82 +1,112 @@
-# 🧪 Agentic Coding Lab
-
-> **A research laboratory for the next generation of software engineering: AI-Agent Orchestration.**
-
-Welcome to the **Agentic Coding Lab**. This repository serves as a knowledge hub for exploring, dissecting, and mastering the workflows of "Agentic Coding"—where developers don't just write code, but orchestrate systems of AI agents to build software.
-
-[🇻🇳 **Tiếng Việt (Vietnamese Version)**](vn/README.md)
-
----
-
-## 🧭 Mission
-
-The goal of this lab is to document and standardize distinct methodologies for working with AI Agents. We move beyond simple "chat-based coding" (Vibe Coding) to **Systematic Agent Orchestration**.
-
-## 🔬 Core Research Areas
-
-### 1. Scrum & Project Management
-*Structuring the Agentic Team*
-
-Adapting Scrum methodologies for AI-augmented development, defining roles and responsibilities in a hybrid human-agent workforce.
-
-- **[Scrum Overview](en/understand-scrum/index.md)**: Team structure, roles, and glossary.
-
-### 2. The BMAD Method
-*Business Methodology and Architecture Development*
-
-A disciplined, phase-based framework for converting natural language into enterprise-grade software. It bridges the gap between a vague idea and executable code through strict architectural scaffolding.
-
-- **[Architecture Analysis](en/understand-bmad/BMAD-Architecture-Analysis.md)**: How BMAD is structured.
-- **[Workflow Deep Dive](en/understand-bmad/BMAD-Workflow-Deep-Dive.md)**: The 5 phases of development.
-- **[Command Execution Logic](en/understand-bmad/BMAD-Command-Execution-Logic.md)**: How slash commands drive the agent engine.
-
-### 3. Beads: Agent Task Management
-*The "Jira" for AI Agents*
-
-A specialized issue tracking system designed for agents, solving the "Agent Amnesia" problem by persisting context and state outside the context window.
-
-- **[Understanding Beads](en/understand-beads.md)**: Why Markdown tasks fail and how Beads succeeds.
-
-### 4. Claude Code Mastery
-*Advanced V2 Guide*
-
-Techniques for controlling the most powerful coding agent currently available, focusing on deterministic behavior via hooks and enforcement layers.
-
-- **[Claude Code Newbie to Pro](en/understand-claude-code-newbie.md)**: Global scaffolding, hooks, and security gates.
+<p align="center">
+  <h1 align="center">🧪 Agentic Coding Lab</h1>
+  <p align="center">
+    <strong>A research knowledge base for the next generation of software engineering:<br/>AI-Agent Orchestration & Agentic Coding.</strong>
+  </p>
+  <p align="center">
+    <a href="README.md">🇬🇧 English</a> · <a href="README.vn.md">🇻🇳 Tiếng Việt</a>
+  </p>
+</p>
 
 ---
 
-## 📚 Course: Mastering BMAD
+## 🧭 What is this?
 
-A complete curriculum designed to turn you into a Technical Agent Lead.
+This repository is a **structured knowledge base** documenting research on **Agentic Coding** — the practice of orchestrating AI agents to build software systematically, moving beyond simple "chat-based coding" (Vibe Coding) toward **reliable, spec-driven, multi-agent development**.
 
-| Module | Description | Links |
-| :--- | :--- | :--- |
-| **Module 1** | **Concept & Mindset**<br>The "Workflow-First" philosophy. | [🇬🇧 English](en/understand-bmad/course/module-1-concept.md) • [🇻🇳 Vietnamese](vn/understand-bmad/course/module-1-concept.md) |
-| **Module 2** | **Commands**<br>The toolset for every project phase. | [🇬🇧 English](en/understand-bmad/course/module-2-commands.md) • [🇻🇳 Vietnamese](vn/understand-bmad/course/module-2-commands.md) |
-| **Case Study 1** | **Greenfield**<br>Building new features from scratch. | [🇬🇧 English](en/understand-bmad/course/case-study-1-greenfield.md) • [🇻🇳 Vietnamese](vn/understand-bmad/course/case-study-1-greenfield.md) |
-| **Case Study 2** | **Brownfield**<br>Mastering legacy codebases. | [🇬🇧 English](en/understand-bmad/course/case-study-2-brownfield.md) • [🇻🇳 Vietnamese](vn/understand-bmad/course/case-study-2-brownfield.md) |
-| **Case Study 3** | **Creative**<br>Business problem solving & Innovation. | [🇬🇧 English](en/understand-bmad/course/case-study-3-creative.md) • [🇻🇳 Vietnamese](vn/understand-bmad/course/case-study-3-creative.md) |
+Each topic is documented using a consistent **4-document structure**:
+
+| # | Document | Purpose |
+|:--|:---------|:--------|
+| 0 | **Overview** | What it is, problems solved, design philosophy |
+| 1 | **Architecture & Logic** | Internal architecture, data flow, core mechanisms |
+| 2 | **Playbook** | Practical guide — setup, daily operations, cheat sheet, troubleshooting |
+| 3 | **Decision Guide** | Comparison with alternatives, use cases, costs, migration path |
 
 ---
 
-## 🛠 Repository Structure
+## 📚 Knowledge Index
+
+### 🤖 Claude Code — Platform Deep Dives
+
+Detailed research on the Claude Code agentic coding platform and its extensibility systems.
+
+| Topic | Overview | Architecture | Playbook | Decision Guide |
+|:------|:---------|:-------------|:---------|:---------------|
+| **How Claude Code Works** | [📖](en/claude-code/how-claude-code-works/0.%20Overview.md) | [🏗️](en/claude-code/how-claude-code-works/1.%20Architecture%20and%20Logic.md) | [🛠️](en/claude-code/how-claude-code-works/2.%20Playbook.md) | [⚖️](en/claude-code/how-claude-code-works/3.%20Decision%20Guide.md) |
+| **Claude Code Hooks** | [📖](en/claude-code/claude-code-hooks/0.%20Overview.md) | [🏗️](en/claude-code/claude-code-hooks/1.%20Architecture%20and%20Logic.md) | [🛠️](en/claude-code/claude-code-hooks/2.%20Playbook.md) | [⚖️](en/claude-code/claude-code-hooks/3.%20Decision%20Guide.md) |
+| **Claude Code Skills** | [📖](en/claude-code/claude-code-skills/0.%20Overview.md) | [🏗️](en/claude-code/claude-code-skills/1.%20Architecture%20and%20Logic.md) | [🛠️](en/claude-code/claude-code-skills/2.%20Playbook.md) | [⚖️](en/claude-code/claude-code-skills/3.%20Decision%20Guide.md) |
+| **Claude Code Plugins** | [📖](en/claude-code/claude-code-plugins/0.%20Overview.md) | [🏗️](en/claude-code/claude-code-plugins/1.%20Architecture%20and%20Logic.md) | [🛠️](en/claude-code/claude-code-plugins/2.%20Playbook.md) | [⚖️](en/claude-code/claude-code-plugins/3.%20Decision%20Guide.md) |
+| **Claude Code Sub-agents** | [📖](en/claude-code/claude-code-sub-agents/0.%20Overview.md) | [🏗️](en/claude-code/claude-code-sub-agents/1.%20Architecture%20and%20Logic.md) | [🛠️](en/claude-code/claude-code-sub-agents/2.%20Playbook.md) | [⚖️](en/claude-code/claude-code-sub-agents/3.%20Decision%20Guide.md) |
+
+### 🚀 Agentic Frameworks
+
+Research on frameworks that add structure, memory, and orchestration to AI-assisted development.
+
+| Topic | Overview | Architecture | Playbook | Decision Guide |
+|:------|:---------|:-------------|:---------|:---------------|
+| **GSD (Get Shit Done)** | [📖](en/get-shit-done/0.%20Overview.md) | [🏗️](en/get-shit-done/1.%20Architecture%20and%20Logic.md) | [🛠️](en/get-shit-done/2.%20Playbook.md) | [⚖️](en/get-shit-done/3.%20Decision%20Guide.md) |
+| **BMad Method** | [📖](en/bmad-method/0.%20Overview.md) | [🏗️](en/bmad-method/1.%20Architecture%20and%20Logic.md) | [🛠️](en/bmad-method/2.%20Playbook.md) | [⚖️](en/bmad-method/3.%20Decision%20Guide.md) |
+| **Superpowers** | [📖](en/superpowers/0.%20Overview.md) | [🏗️](en/superpowers/1.%20Architecture%20and%20Logic.md) | [🛠️](en/superpowers/2.%20Playbook.md) | [⚖️](en/superpowers/3.%20Decision%20Guide.md) |
+
+### 📝 Supplementary Research
+
+| Topic | Link | Description |
+|:------|:-----|:------------|
+| **Scrum for Agentic Teams** | [📖 Index](en/understand-scrum/index.md) | Adapting Scrum for AI-augmented teams — [Team Structure](en/understand-scrum/01-team-structure.md) · [Glossary](en/understand-scrum/02-glossary.md) |
+| **Beads: Agent Task Management** | [📖 Read](en/understand-beads.md) | Issue tracking designed for AI agents, solving "Agent Amnesia" |
+| **Claude Code — Newbie to Pro** | [📖 Read](en/understand-claude-code-newbie.md) | Getting started guide with hooks and security gates |
+
+---
+
+## 🗺️ How to Navigate
+
+**New to agentic coding?** Start here:
+1. [How Claude Code Works — Overview](en/claude-code/how-claude-code-works/0.%20Overview.md) — Understand the platform
+2. [GSD — Overview](en/get-shit-done/0.%20Overview.md) — Learn structured AI development
+3. [Superpowers — Overview](en/superpowers/0.%20Overview.md) — TDD + quality with AI
+
+**Want to compare frameworks?** Read the Decision Guides:
+- [GSD Decision Guide](en/get-shit-done/3.%20Decision%20Guide.md) — GSD vs BMad vs Vibe-coding
+- [Superpowers Decision Guide](en/superpowers/3.%20Decision%20Guide.md) — Quality-focused comparison
+- [Claude Code Decision Guide](en/claude-code/how-claude-code-works/3.%20Decision%20Guide.md) — Platform comparison
+
+**Ready to use immediately?** Jump to the Playbooks:
+- [Claude Code Playbook](en/claude-code/how-claude-code-works/2.%20Playbook.md) — Setup & daily operations
+- [GSD Playbook](en/get-shit-done/2.%20Playbook.md) — Installation to production workflow
+- [Hooks Playbook](en/claude-code/claude-code-hooks/2.%20Playbook.md) — Event-driven automation
+
+---
+
+## 🏗️ Repository Structure
 
 ```
 agentic-coding-lab/
-├── en/                     # 🇬🇧 English Documentation
-│   ├── understand-beads.md
-│   ├── understand-bmad/
-│   └── ...
-└── vn/                     # 🇻🇳 Vietnamese Documentation
-    ├── understand-beads.md
-    ├── understand-bmad/
-    └── ...
+├── README.md                    # 🇬🇧 You are here
+├── README.vn.md                 # 🇻🇳 Vietnamese version
+├── en/                          # 🇬🇧 English documentation
+│   ├── claude-code/
+│   │   ├── how-claude-code-works/   # Platform internals
+│   │   ├── claude-code-hooks/       # Event-driven automation
+│   │   ├── claude-code-skills/      # Custom instruction sets
+│   │   ├── claude-code-plugins/     # Extensibility & marketplace
+│   │   └── claude-code-sub-agents/  # Multi-agent delegation
+│   ├── get-shit-done/               # GSD framework
+│   ├── bmad-method/                 # BMad framework
+│   ├── superpowers/                 # Superpowers framework
+│   ├── understand-scrum/            # Scrum adaptation
+│   ├── understand-beads.md          # Agent task management
+│   └── understand-claude-code-newbie.md
+└── vn/                          # 🇻🇳 Vietnamese documentation
+    └── (mirror structure of en/)
 ```
 
 ## 🤝 Contribution
 
-This is a living research repo. If you find new agentic patterns or want to improve the translations, feel free to open a PR.
+This is a living research repo. If you find new agentic patterns, want to add new framework research, or improve translations — feel free to open a PR.
 
 ---
-*Maintained by Astragentic Team.*
+
+<p align="center">
+  <sub>Maintained by <strong>Astragentic Team</strong> · Research is ongoing · Last updated: 2026-03</sub>
+</p>

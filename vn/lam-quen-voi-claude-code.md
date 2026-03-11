@@ -847,21 +847,3 @@ CLAUDE.local.md
 | **Hooks** | `~/.claude/settings.json` | Thực thi xác định |
 | **/clear** | Command | Reset ngữ cảnh (Rất quan trọng!) |
 | **/init** | Command | Generate project CLAUDE.md |
-
----
-
-## Nguồn tham khảo
-
-- [Claude Code: Best practices for agentic coding](https://www.anthropic.com/engineering/claude-code-best-practices) — Anthropic
-- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Anthropic
-- [Introducing the Model Context Protocol](https://www.anthropic.com/news/model-context-protocol) — Anthropic
-- [Equipping agents for the real world with Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) — Anthropic
-- [Agent Skills Documentation](https://code.claude.com/docs/en/skills) — Claude Code Docs
-- [Hooks Reference](https://code.claude.com/docs/en/hooks) — Claude Code Docs
-- [Context7 MCP Server](https://github.com/upstash/context7) — Upstash
-- [Context Rot Research](https://research.trychroma.com/context-rot) — Chroma
-- [LLMs Get Lost In Multi-Turn Conversation](https://arxiv.org/pdf/2505.06120) — arXiv
-- [Claude Code Security Best Practices](https://www.backslash.security/blog/claude-code-security-best-practices) — Backslash
-- [Claude Code Hooks: Guardrails That Actually Work](https://paddo.dev/blog/claude-code-hooks-guardrails/) — Paddo.dev
-- [Slash Commands Documentation](https://code.claude.com/docs/en/slash-commands) — Claude Code Docs
-- [Context Management Guide](https://www.arsturn.com/blog/beyond-prompting-a-guide-to-managing-context-in-claude-code) — Arsturn

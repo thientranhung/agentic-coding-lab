@@ -38,6 +38,7 @@ Detailed research on the Claude Code agentic coding platform and its extensibili
 | **Claude Code Skills** | [📖](en/claude-code/claude-code-skills/0.%20Overview.md) | [🏗️](en/claude-code/claude-code-skills/1.%20Architecture%20and%20Logic.md) | [🛠️](en/claude-code/claude-code-skills/2.%20Playbook.md) | [⚖️](en/claude-code/claude-code-skills/3.%20Decision%20Guide.md) |
 | **Claude Code Plugins** | [📖](en/claude-code/claude-code-plugins/0.%20Overview.md) | [🏗️](en/claude-code/claude-code-plugins/1.%20Architecture%20and%20Logic.md) | [🛠️](en/claude-code/claude-code-plugins/2.%20Playbook.md) | [⚖️](en/claude-code/claude-code-plugins/3.%20Decision%20Guide.md) |
 | **Claude Code Sub-agents** | [📖](en/claude-code/claude-code-sub-agents/0.%20Overview.md) | [🏗️](en/claude-code/claude-code-sub-agents/1.%20Architecture%20and%20Logic.md) | [🛠️](en/claude-code/claude-code-sub-agents/2.%20Playbook.md) | [⚖️](en/claude-code/claude-code-sub-agents/3.%20Decision%20Guide.md) |
+| **Claude Code Memory** | [📖](en/claude-code/claude-code-memory/0.%20Overview.md) | [🏗️](en/claude-code/claude-code-memory/1.%20Architecture%20and%20Logic.md) | [🛠️](en/claude-code/claude-code-memory/2.%20Playbook.md) | [⚖️](en/claude-code/claude-code-memory/3.%20Decision%20Guide.md) |
 
 ### 🚀 Agentic Frameworks
 
@@ -90,7 +91,8 @@ agentic-coding-lab/
 │   │   ├── claude-code-hooks/       # Event-driven automation
 │   │   ├── claude-code-skills/      # Custom instruction sets
 │   │   ├── claude-code-plugins/     # Extensibility & marketplace
-│   │   └── claude-code-sub-agents/  # Multi-agent delegation
+│   │   ├── claude-code-sub-agents/  # Multi-agent delegation
+│   │   └── claude-code-memory/      # Persistent memory & CLAUDE.md
 │   ├── get-shit-done/               # GSD framework
 │   ├── bmad-method/                 # BMad framework
 │   ├── superpowers/                 # Superpowers framework

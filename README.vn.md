@@ -38,6 +38,7 @@ Nghiên cứu chi tiết về nền tảng agentic coding Claude Code và các h
 | **Claude Code Skills** | [📖](vn/claude-code/claude-code-skills/0.%20Overview.md) | [🏗️](vn/claude-code/claude-code-skills/1.%20Architecture%20and%20Logic.md) | [🛠️](vn/claude-code/claude-code-skills/2.%20Playbook.md) | [⚖️](vn/claude-code/claude-code-skills/3.%20Decision%20Guide.md) |
 | **Claude Code Plugins** | [📖](vn/claude-code/claude-code-plugins/0.%20Overview.md) | [🏗️](vn/claude-code/claude-code-plugins/1.%20Architecture%20and%20Logic.md) | [🛠️](vn/claude-code/claude-code-plugins/2.%20Playbook.md) | [⚖️](vn/claude-code/claude-code-plugins/3.%20Decision%20Guide.md) |
 | **Claude Code Sub-agents** | [📖](vn/claude-code/claude-code-sub-agents/0.%20Overview.md) | [🏗️](vn/claude-code/claude-code-sub-agents/1.%20Architecture%20and%20Logic.md) | [🛠️](vn/claude-code/claude-code-sub-agents/2.%20Playbook.md) | [⚖️](vn/claude-code/claude-code-sub-agents/3.%20Decision%20Guide.md) |
+| **Claude Code Memory** | [📖](vn/claude-code/claude-code-memory/0.%20Overview.md) | [🏗️](vn/claude-code/claude-code-memory/1.%20Architecture%20and%20Logic.md) | [🛠️](vn/claude-code/claude-code-memory/2.%20Playbook.md) | [⚖️](vn/claude-code/claude-code-memory/3.%20Decision%20Guide.md) |
 
 ### 🚀 Agentic Frameworks
 
@@ -90,7 +91,8 @@ agentic-coding-lab/
 │   │   ├── claude-code-hooks/       # Tự động hóa dựa trên sự kiện
 │   │   ├── claude-code-skills/      # Bộ hướng dẫn tùy chỉnh
 │   │   ├── claude-code-plugins/     # Mở rộng & marketplace
-│   │   └── claude-code-sub-agents/  # Ủy thác đa agent
+│   │   ├── claude-code-sub-agents/  # Ủy thác đa agent
+│   │   └── claude-code-memory/      # Bộ nhớ bền vững & CLAUDE.md
 │   ├── get-shit-done/               # GSD framework
 │   ├── bmad-method/                 # BMad framework
 │   ├── superpowers/                 # Superpowers framework

@@ -1,0 +1,91 @@
+name: 📢 Auto Release on New Documentation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'en/**'
+      - 'vn/**'
+
+jobs:
+  detect-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect new/changed docs
+        id: detect
+        run: |
+          # Get list of changed files in en/ and vn/
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'en/' 'vn/' | head -50)
+
+          if [ -z "$CHANGED" ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          echo "skip=false" >> $GITHUB_OUTPUT
+
+          # Extract unique topic folders from changed files
+          TOPICS=$(echo "$CHANGED" | grep -oP '(en|vn)/[^/]+' | sed 's/^en\///' | sed 's/^vn\///' | sort -u | head -10)
+
+          # Build a human-readable summary
+          TOPIC_LIST=""
+          for topic in $TOPICS; do
+            # Clean up topic name for display
+            DISPLAY_NAME=$(echo "$topic" | sed 's/-/ /g' | sed 's/\.md$//')
+            TOPIC_LIST="${TOPIC_LIST}- **${DISPLAY_NAME}**\n"
+          done
+
+          # Count files
+          FILE_COUNT=$(echo "$CHANGED" | wc -l | tr -d ' ')
+
+          # Generate date-based tag
+          DATE_TAG="docs-$(date +'%Y.%m.%d')"
+          
+          # Check if tag exists, append counter if needed
+          COUNTER=1
+          FINAL_TAG="$DATE_TAG"
+          while git tag -l "$FINAL_TAG" | grep -q .; do
+            COUNTER=$((COUNTER + 1))
+            FINAL_TAG="${DATE_TAG}.${COUNTER}"
+          done
+
+          echo "tag=$FINAL_TAG" >> $GITHUB_OUTPUT
+          echo "file_count=$FILE_COUNT" >> $GITHUB_OUTPUT
+          echo "topics<<EOF" >> $GITHUB_OUTPUT
+          echo -e "$TOPIC_LIST" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          echo "changed<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGED" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create Release
+        if: steps.detect.outputs.skip != 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.detect.outputs.tag }}
+          name: "📚 Documentation Update — ${{ steps.detect.outputs.tag }}"
+          body: |
+            ## 📢 New Documentation Update
+
+            **${{ steps.detect.outputs.file_count }}** file(s) updated across the following topics:
+
+            ${{ steps.detect.outputs.topics }}
+
+            ### Changed Files
+            ```
+            ${{ steps.detect.outputs.changed }}
+            ```
+
+            ---
+            📖 **Browse the full knowledge base:** [README](https://github.com/${{ github.repository }}/blob/main/README.md)
+          draft: false
+          prerelease: false
+          generate_release_notes: false

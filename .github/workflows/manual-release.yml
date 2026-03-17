@@ -1,0 +1,63 @@
+name: 📢 Manual Documentation Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_title:
+        description: 'Release title (e.g., "Added Gemini CLI docs")'
+        required: true
+        type: string
+      release_notes:
+        description: 'Release notes (markdown supported, describe what was added/changed)'
+        required: true
+        type: string
+      tag_suffix:
+        description: 'Optional tag suffix (default: date-based, e.g., "gemini-cli")'
+        required: false
+        type: string
+
+jobs:
+  manual-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate tag
+        id: tag
+        run: |
+          DATE_TAG="docs-$(date +'%Y.%m.%d')"
+          SUFFIX="${{ github.event.inputs.tag_suffix }}"
+          
+          if [ -n "$SUFFIX" ]; then
+            FINAL_TAG="${DATE_TAG}-${SUFFIX}"
+          else
+            FINAL_TAG="$DATE_TAG"
+          fi
+
+          # Check if tag exists, append counter if needed
+          COUNTER=1
+          BASE_TAG="$FINAL_TAG"
+          while git tag -l "$FINAL_TAG" | grep -q .; do
+            COUNTER=$((COUNTER + 1))
+            FINAL_TAG="${BASE_TAG}.${COUNTER}"
+          done
+
+          echo "tag=$FINAL_TAG" >> $GITHUB_OUTPUT
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          name: "📚 ${{ github.event.inputs.release_title }}"
+          body: |
+            ${{ github.event.inputs.release_notes }}
+
+            ---
+            📖 **Browse the full knowledge base:** [README](https://github.com/${{ github.repository }}/blob/main/README.md)
+          draft: false
+          prerelease: false
+          generate_release_notes: false

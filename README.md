@@ -40,6 +40,14 @@ Detailed research on the Claude Code agentic coding platform and its extensibili
 | **Claude Code Sub-agents** | [📖](en/claude-code/claude-code-sub-agents/0.%20Overview.md) | [🏗️](en/claude-code/claude-code-sub-agents/1.%20Architecture%20and%20Logic.md) | [🛠️](en/claude-code/claude-code-sub-agents/2.%20Playbook.md) | [⚖️](en/claude-code/claude-code-sub-agents/3.%20Decision%20Guide.md) |
 | **Claude Code Memory** | [📖](en/claude-code/claude-code-memory/0.%20Overview.md) | [🏗️](en/claude-code/claude-code-memory/1.%20Architecture%20and%20Logic.md) | [🛠️](en/claude-code/claude-code-memory/2.%20Playbook.md) | [⚖️](en/claude-code/claude-code-memory/3.%20Decision%20Guide.md) |
 
+### 🔷 Gemini CLI — Platform Deep Dive
+
+Detailed research on Google's open-source AI agent for the terminal.
+
+| Topic | Overview | Architecture | Playbook | Comparison |
+|:------|:---------|:-------------|:---------|:-----------|
+| **Gemini CLI** | [📖](en/gemini-cli/0.%20Overview.md) | [🏗️](en/gemini-cli/1.%20Architecture%20and%20Logic.md) | [🛠️](en/gemini-cli/2.%20Playbook.md) | [⚖️](en/gemini-cli/3.%20Gemini%20CLI%20vs%20Claude%20Code.md) |
+
 ### 🚀 Agentic Frameworks
 
 Research on frameworks that add structure, memory, and orchestration to AI-assisted development.
@@ -64,16 +72,19 @@ Research on frameworks that add structure, memory, and orchestration to AI-assis
 
 **New to agentic coding?** Start here:
 1. [How Claude Code Works — Overview](en/claude-code/how-claude-code-works/0.%20Overview.md) — Understand the platform
-2. [GSD — Overview](en/get-shit-done/0.%20Overview.md) — Learn structured AI development
-3. [Superpowers — Overview](en/superpowers/0.%20Overview.md) — TDD + quality with AI
+2. [Gemini CLI — Overview](en/gemini-cli/0.%20Overview.md) — Google's open-source alternative
+3. [GSD — Overview](en/get-shit-done/0.%20Overview.md) — Learn structured AI development
+4. [Superpowers — Overview](en/superpowers/0.%20Overview.md) — TDD + quality with AI
 
-**Want to compare frameworks?** Read the Decision Guides:
+**Want to compare platforms & frameworks?** Read the Decision Guides:
+- [Gemini CLI vs Claude Code](en/gemini-cli/3.%20Gemini%20CLI%20vs%20Claude%20Code.md) — Side-by-side platform comparison
 - [GSD Decision Guide](en/get-shit-done/3.%20Decision%20Guide.md) — GSD vs BMad vs Vibe-coding
 - [Superpowers Decision Guide](en/superpowers/3.%20Decision%20Guide.md) — Quality-focused comparison
 - [Claude Code Decision Guide](en/claude-code/how-claude-code-works/3.%20Decision%20Guide.md) — Platform comparison
 
 **Ready to use immediately?** Jump to the Playbooks:
 - [Claude Code Playbook](en/claude-code/how-claude-code-works/2.%20Playbook.md) — Setup & daily operations
+- [Gemini CLI Playbook](en/gemini-cli/2.%20Playbook.md) — Installation, cheat sheet & troubleshooting
 - [GSD Playbook](en/get-shit-done/2.%20Playbook.md) — Installation to production workflow
 - [Hooks Playbook](en/claude-code/claude-code-hooks/2.%20Playbook.md) — Event-driven automation
 
@@ -93,6 +104,7 @@ agentic-coding-lab/
 │   │   ├── claude-code-plugins/     # Extensibility & marketplace
 │   │   ├── claude-code-sub-agents/  # Multi-agent delegation
 │   │   └── claude-code-memory/      # Persistent memory & CLAUDE.md
+│   ├── gemini-cli/                  # Google's Gemini CLI platform
 │   ├── get-shit-done/               # GSD framework
 │   ├── bmad-method/                 # BMad framework
 │   ├── superpowers/                 # Superpowers framework

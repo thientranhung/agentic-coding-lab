@@ -42,7 +42,19 @@ Một hệ thống theo dõi vấn đề chuyên biệt được thiết kế ch
 
 Các kỹ thuật để kiểm soát coding agent mạnh mẽ nhất hiện nay, tập trung vào hành vi xác định (deterministic) thông qua hooks và các lớp thực thi (enforcement layers).
 
-- **[Claude Code từ Newbie đến Pro](understand-claude-code-newbie.md)**: Scaffolding toàn cục, hooks, và các cổng bảo mật.
+- **[Claude Code từ Newbie đến Pro](lam-quen-voi-claude-code.md)**: Scaffolding toàn cục, hooks, và các cổng bảo mật.
+
+### 5. Gemini CLI
+*AI Agent mã nguồn mở cho Terminal*
+
+Nghiên cứu chi tiết về nền tảng agentic coding mã nguồn mở của Google, hỗ trợ MCP, sandboxing và multimodal với 1M token context.
+
+| Tài liệu | Nội dung | Liên kết |
+| :--- | :--- | :--- |
+| **Tổng quan** | Gemini CLI là gì, so sánh, triết lý thiết kế | [📖](gemini-cli/0.%20Overview.md) |
+| **Kiến trúc & Logic** | Data flow, tool system, cơ chế nội bộ | [🏗️](gemini-cli/1.%20Architecture%20and%20Logic.md) |
+| **Playbook** | Cài đặt, Day 1, cheat sheet, troubleshooting | [🛠️](gemini-cli/2.%20Playbook.md) |
+| **So sánh với Claude Code** | Bảng so sánh lệnh tương đương chi tiết | [⚖️](gemini-cli/3.%20Gemini%20CLI%20vs%20Claude%20Code.md) |
 
 ---
 
@@ -65,12 +77,20 @@ Một giáo trình hoàn chỉnh được thiết kế để biến bạn thành
 ```
 agentic-coding-lab/
 ├── en/                     # 🇬🇧 Tài liệu Tiếng Anh
+│   ├── claude-code/        # Deep dive Claude Code
+│   ├── gemini-cli/         # Deep dive Gemini CLI
+│   ├── get-shit-done/      # GSD framework
+│   ├── bmad-method/        # BMad framework
+│   ├── superpowers/        # Superpowers framework
+│   ├── understand-scrum/
 │   ├── understand-beads.md
-│   ├── understand-bmad/
 │   └── ...
 └── vn/                     # 🇻🇳 Tài liệu Tiếng Việt (Bạn đang ở đây)
-    ├── understand-beads.md
-    ├── understand-bmad/
+    ├── claude-code/
+    ├── gemini-cli/
+    ├── get-shit-done/
+    ├── bmad-method/
+    ├── superpowers/
     └── ...
 ```
 

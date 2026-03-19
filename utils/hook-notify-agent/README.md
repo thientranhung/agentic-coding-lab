@@ -43,12 +43,14 @@ brew install jq
 sudo apt-get install jq
 ```
 
-**2. Copy script:**
+**2. Tải script từ GitHub:**
 
 ```bash
 mkdir -p ~/.claude/hooks
-cp utils/hook-notify-agent/notify.sh ~/.claude/hooks/notify.sh
-cp utils/hook-notify-agent/.env ~/.claude/hooks/.env
+curl -o ~/.claude/hooks/notify.sh \
+  https://raw.githubusercontent.com/thientranhung/agentic-coding-lab/main/utils/hook-notify-agent/notify.sh
+curl -o ~/.claude/hooks/.env \
+  https://raw.githubusercontent.com/thientranhung/agentic-coding-lab/main/utils/hook-notify-agent/.env
 chmod +x ~/.claude/hooks/notify.sh
 ```
 

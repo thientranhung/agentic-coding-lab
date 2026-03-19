@@ -35,11 +35,12 @@ brew install jq
 sudo apt-get install jq
 ```
 
-**2. Copy script:**
+**2. Tải script từ GitHub:**
 
 ```bash
 mkdir -p ~/.claude/hooks
-cp utils/claude-code-statusline/statusline.sh ~/.claude/hooks/statusline.sh
+curl -o ~/.claude/hooks/statusline.sh \
+  https://raw.githubusercontent.com/thientranhung/agentic-coding-lab/main/utils/claude-code-statusline/statusline.sh
 chmod +x ~/.claude/hooks/statusline.sh
 ```
 

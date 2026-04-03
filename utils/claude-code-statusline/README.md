@@ -1,22 +1,29 @@
 # Claude Code Statusline
 
-Hiển thị thanh trạng thái trong terminal mỗi khi Claude Code gửi notification.
+Hiển thị thanh trạng thái trong terminal mỗi khi Claude Code gửi notification — bao gồm thông tin **quota/rate limits** cho Claude.ai subscribers.
 
 ```
-[Claude Sonnet 4] 📁 my-project | 🌿 feature/login
+[Claude Sonnet 4] 🔑 Claude.ai | 📁 my-project | 🌿 feature/login
 ████████░░ 80% | $0.42 | ⏱️ 5m 12s
+⚡ 5h: 45.2% ↻2h15m | 7d: 12.8% ↻6d3h
 ```
 
 | Thông tin | Mô tả | Ví dụ |
 |---|---|---|
 | 🤖 **Model** | Tên model đang sử dụng | `[Claude Sonnet 4]` |
+| 🔑 **Auth mode** | Tự nhận diện Claude.ai hoặc API Key | `Claude.ai` / `API Key` |
 | 📁 **Thư mục** | Thư mục làm việc hiện tại | `my-project` |
 | 🌿 **Git branch** | Nhánh git đang active | `feature/login` |
 | 📊 **Context window** | % context đã dùng (progress bar) | `████░░░░░░ 40%` |
 | 💰 **Chi phí** | Tổng chi phí phiên hiện tại (USD) | `$0.15` |
 | ⏱️ **Thời gian** | Tổng thời gian chạy | `2m 35s` |
+| ⚡ **Quota 5h** | % quota đã dùng trong 5 giờ gần nhất | `45.2%` (color-coded) |
+| ⚡ **Quota 7d** | % quota đã dùng trong 7 ngày | `12.8%` (color-coded) |
+| ↻ **Reset** | Thời gian còn lại đến khi quota reset | `2h15m` / `6d3h` |
 
-Progress bar đổi màu theo context usage: 🟢 xanh (<70%) → 🟡 vàng (70-89%) → 🔴 đỏ (≥90%)
+Progress bar & quota đổi màu theo mức sử dụng: 🟢 xanh (<70%) → 🟡 vàng (70-89%) → 🔴 đỏ (≥90%)
+
+> **Note:** Dòng quota chỉ hiển thị khi dùng Claude.ai subscription (có `rate_limits` data). Nếu dùng API Key, dòng này sẽ tự động ẩn.
 
 ## Yêu cầu
 
@@ -67,7 +74,11 @@ chmod +x ~/.claude/hooks/statusline.sh
 **4. Test:**
 
 ```bash
-echo '{"model":{"display_name":"Test"},"workspace":{"current_dir":"/tmp/test"},"cost":{"total_cost_usd":0.05,"total_duration_ms":65000},"context_window":{"used_percentage":42.5}}' | bash ~/.claude/hooks/statusline.sh
+# Test với rate limits (Claude.ai mode)
+echo '{"model":{"display_name":"Claude Sonnet 4"},"workspace":{"current_dir":"/tmp/test"},"cost":{"total_cost_usd":0.42,"total_duration_ms":312000},"context_window":{"used_percentage":80},"rate_limits":{"five_hour":{"used_percentage":45.2,"resets_at":'$(($(date +%s)+8100))'},"seven_day":{"used_percentage":12.8,"resets_at":'$(($(date +%s)+529200))'}}}' | bash ~/.claude/hooks/statusline.sh
+
+# Test không có rate limits (API Key mode)
+echo '{"model":{"display_name":"Claude Sonnet 4"},"workspace":{"current_dir":"/tmp/test"},"cost":{"total_cost_usd":0.05,"total_duration_ms":65000},"context_window":{"used_percentage":42.5}}' | bash ~/.claude/hooks/statusline.sh
 ```
 
 ---
@@ -86,10 +97,13 @@ Claude Code gửi Notification event
    JSON data → stdin → statusline.sh
         │
         ▼
-   jq parse các trường: model, workspace, cost, context_window
+   jq parse: model, workspace, cost, context_window, rate_limits
         │
         ▼
-   Tính toán progress bar + màu sắc
+   Nhận diện auth mode (Claude.ai / API Key)
+        │
+        ▼
+   Tính toán progress bar + màu sắc + quota info
         │
         ▼
    In ra terminal (stdout)
@@ -104,6 +118,10 @@ Claude Code gửi Notification event
 | Cost | `.cost.total_cost_usd` | Tổng chi phí (USD) |
 | Context usage | `.context_window.used_percentage` | % context window đã dùng |
 | Duration | `.cost.total_duration_ms` | Tổng thời gian (milliseconds) |
+| Rate limits 5h | `.rate_limits.five_hour.used_percentage` | % quota 5 giờ đã dùng |
+| Rate limits 5h reset | `.rate_limits.five_hour.resets_at` | Unix timestamp reset quota 5h |
+| Rate limits 7d | `.rate_limits.seven_day.used_percentage` | % quota 7 ngày đã dùng |
+| Rate limits 7d reset | `.rate_limits.seven_day.resets_at` | Unix timestamp reset quota 7d |
 
 ### Logic progress bar
 
@@ -117,11 +135,19 @@ EMPTY  = 10 - FILLED
 
 ### Logic màu sắc
 
-| Context usage | Màu | Ý nghĩa |
+| Mức sử dụng | Màu | Ý nghĩa |
 |---|---|---|
 | < 70% | 🟢 Xanh | An toàn |
 | 70% – 89% | 🟡 Vàng | Cần lưu ý |
 | ≥ 90% | 🔴 Đỏ | Sắp hết — nên compact hoặc mở session mới |
+
+> Bảng màu này áp dụng cho **cả** context window progress bar **và** quota percentages.
+
+### Auth mode detection
+
+Script tự nhận diện auth mode dựa trên sự có mặt của `rate_limits` trong JSON data:
+- Có `rate_limits` → **Claude.ai** subscriber → hiển thị quota info
+- Không có `rate_limits` → **API Key** → ẩn dòng quota
 
 ### Git branch
 

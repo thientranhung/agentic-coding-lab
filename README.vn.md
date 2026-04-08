@@ -40,6 +40,14 @@ Nghiên cứu chi tiết về nền tảng agentic coding Claude Code và các h
 | **Claude Code Sub-agents** | [📖](vn/claude-code/claude-code-sub-agents/0.%20Overview.md) | [🏗️](vn/claude-code/claude-code-sub-agents/1.%20Architecture%20and%20Logic.md) | [🛠️](vn/claude-code/claude-code-sub-agents/2.%20Playbook.md) | [⚖️](vn/claude-code/claude-code-sub-agents/3.%20Decision%20Guide.md) |
 | **Claude Code Memory** | [📖](vn/claude-code/claude-code-memory/0.%20Overview.md) | [🏗️](vn/claude-code/claude-code-memory/1.%20Architecture%20and%20Logic.md) | [🛠️](vn/claude-code/claude-code-memory/2.%20Playbook.md) | [⚖️](vn/claude-code/claude-code-memory/3.%20Decision%20Guide.md) |
 
+### 🔷 Gemini CLI — Nghiên cứu Chuyên sâu
+
+Nghiên cứu chi tiết về AI Agent mã nguồn mở cho terminal của Google.
+
+| Chủ đề | Tổng quan | Kiến trúc | Playbook | So sánh |
+|:-------|:----------|:----------|:---------|:--------|
+| **Gemini CLI** | [📖](vn/gemini-cli/0.%20Overview.md) | [🏗️](vn/gemini-cli/1.%20Architecture%20and%20Logic.md) | [🛠️](vn/gemini-cli/2.%20Playbook.md) | [⚖️](vn/gemini-cli/3.%20Gemini%20CLI%20vs%20Claude%20Code.md) |
+
 ### 🚀 Agentic Frameworks
 
 Nghiên cứu về các framework bổ sung cấu trúc, bộ nhớ, và khả năng điều phối cho phát triển AI.
@@ -56,7 +64,7 @@ Nghiên cứu về các framework bổ sung cấu trúc, bộ nhớ, và khả n
 |:-------|:---------|:------|
 | **Scrum cho Agentic Teams** | [📖 Mục lục](vn/understand-scrum/index.md) | Áp dụng Scrum cho team kết hợp AI — [Cơ cấu Team](vn/understand-scrum/01-team-structure.md) · [Thuật ngữ](vn/understand-scrum/02-glossary.md) |
 | **Beads: Quản lý Task cho Agent** | [📖 Đọc](vn/understand-beads.md) | Hệ thống tracking được thiết kế cho AI agents, giải quyết "Agent Amnesia" |
-| **Làm quen với Claude Code** | [📖 Đọc](vn/lam-quen-voi-claude-code.md) | Hướng dẫn từ cơ bản đến nâng cao với hooks và security gates |
+| **Làm quen với Claude Code** | [📖 Đọc](vn/getting-started-with-claude-code.md) | Hướng dẫn từ cơ bản đến nâng cao với hooks và security gates |
 
 ---
 
